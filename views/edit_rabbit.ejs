@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit Rabbit</title>
+</head>
+<body>
+  <h1>Edit Rabbit Info</h1>
+  <form class="" action="/rabbit/<%= rabbit_info[0].id %>" method="post">
+    <label for="">Name:</label>
+    <input type="text" name="name" value="<%= rabbit_info[0].name %>">
+    <label for="">Age:</label>
+    <input type="text" name="age" value="<%= rabbit_info[0].age %>">
+    <label for="">Color:</label>
+    <select   name="color">
+      <option selected="selected">
+        <%= rabbit_info[0].color %>
+      </option>
+      <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Brown">Brown</option>
+      <option value="Gray">Gray</option>
+    </select>
+    <label for="">Cuteness Level:</label>
+    <input type="text" name="level" value="<%= rabbit_info[0].cuteness_level %>">
+    <label for="">Added by:</label>
+    <input type="text" name="added_by" value="<%= rabbit_info[0].added_by %>">
+    <button type="submit" name="button">Edit Rabbit</button>
+  </form>
+</body>
+</html>

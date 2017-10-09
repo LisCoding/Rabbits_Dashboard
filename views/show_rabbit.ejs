@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Rabbit info</title>
+  </head>
+  <body>
+    <div class="Content">
+      <h1>Cute Rabbits!</h1>
+      <h3>Name: <%= rabbit_info[0].name %></a></h3>
+      <h4>Age: <%= rabbit_info[0].age %></h4>
+      <h4>Color: <%= rabbit_info[0].color %></h4>
+      <h4>Cuteness Level: <%= rabbit_info[0].cuteness_level %></h4>
+      <h5>Added by: <%= rabbit_info[0].added_by %></h5>
+      <h5>Date: <%= moment(rabbit_info[0].createdAt).format( 'h:mma MMMM D YYYY') %> </h5>
+      <a href="/rabbit/edit/<%= rabbit_info[0]._id %>">Edit Rabbit Info</a>
+      <a href="/rabbit/delete/<%= rabbit_info[0]._id %>">Delete Rabbit</a>
+      <hr>
+    </div>
+  </body>
+</html>

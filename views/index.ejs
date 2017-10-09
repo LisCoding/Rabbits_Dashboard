@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="Content">
+    <h1>Cute Rabbits!</h1>
+    <% for (var x in rabbits_info) { %>
+      <h3>Name: <a href="/rabbit/<%= rabbits_info[x]._id %>"><%= rabbits_info[x].name %></a></h3>
+      <h3>age: <%= rabbits_info[x].age %></h3>
+      <h3>Color: <%= rabbits_info[x].color%></h3>
+      <h3>Cuteness Level: <%= rabbits_info[x].cuteness_level %></h3>
+      <h4>Added by: <%= rabbits_info[x].added_by %></h4>
+      <h4>Date: <%= moment(rabbits_info[x].createdAt).format( 'h:mma MMMM D YYYY') %> </h4>
+      <a href="/rabbit/edit/<%=rabbits_info[x].id %>">Edit Rabbit Info</a>
+      <a href="/rabbit/delete/<%= rabbits_info[x].id %>">Delete Rabbit</a>
+      <hr>
+      <% } %>
+    </div>
+    <form class="" action="rabbit/new" method="post">
+      <button type="submit" name="button">Add new Rabbit</button>
+    </form>
+
+  </body>
+  </html>
